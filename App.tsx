@@ -234,7 +234,7 @@ const App: React.FC = () => {
         const htmlContent = marked.parse(message.text.endsWith('█') ? message.text.slice(0, -1) : message.text);
         
         return (
-            <div key={index} className="prose prose-invert prose-p:text-gray-300 prose-li:text-gray-300 prose-headings:text-cyan-400 prose-strong:text-white prose-code:text-amber-300 prose-code:before:content-none prose-code:after:content-none prose-pre:bg-[#161B22] animate-fade-in-up">
+            <div key={index} className="prose prose-sm sm:prose-base prose-invert prose-p:text-gray-300 prose-li:text-gray-300 prose-headings:text-cyan-400 prose-strong:text-white prose-code:text-amber-300 prose-code:before:content-none prose-code:after:content-none prose-pre:bg-[#161B22] animate-fade-in-up">
                 <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
                 {isTyping && !message.text.endsWith('█') && <span className="inline-block w-2.5 h-5 bg-cyan-400 animate-pulse ml-1" aria-label="AI is typing"></span>}
                 {message.citations && message.citations.length > 0 && (
